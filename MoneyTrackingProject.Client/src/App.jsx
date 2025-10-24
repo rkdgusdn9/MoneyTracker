@@ -1,64 +1,24 @@
-import { useState } from "react";
 import "./App.css";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Ledger from "./pages/Ledger";
+import Summary from "./pages/Summary";
+import Login from "./pages/Login";
+import SignUp from "./pages/SignUp";
+import MainLayout from "./layouts/MainLayout";
+import { Routes, Route } from "react-router-dom";
 
-function App() {
-  let [testUS, changeCountry] = useState([
-    "Spain",
-    "Italy",
-    "France",
-    "Japan",
-    "Korea",
-  ]);
-  let [count, addCount] = useState(0);
-
+export default function App() {
   return (
-    <div className="App">
-      <div className="nav">
-        <h4>Learning React</h4>
-      </div>
-      <button
-        onClick={() => {
-          let copy = [...testUS];
-          copy.sort((a, b) => a.localeCompare(b));
-          changeCountry(copy);
-        }}
-      >
-        SortByAlphabet
-      </button>
-      <button
-        onClick={() => {
-          let copy = [...testUS];
-          copy[0] = testUS[1];
-          changeCountry(copy);
-        }}
-      >
-        Country
-      </button>
-      <div>
-        <h4>
-          {testUS[0]}
-          <span
-            onClick={() => {
-              addCount(count + 1);
-            }}
-          >
-            {" "}
-            ❤{" "}
-          </span>{" "}
-          {count}
-        </h4>
-        <p>03-07-2024</p>
-      </div>
-      <div>
-        <h4>{testUS[1]}</h4>
-        <p>03-07-2024</p>
-      </div>
-      <div>
-        <h4>{testUS[2]}</h4>
-        <p>03-07-2024</p>
-      </div>
-    </div>
+    <Routes>
+      <Route element={<MainLayout />}>
+        <Route path="/" element={<Home />} />
+        <Route path="/About" element={<About />} />
+        <Route path="/Ledger" element={<Ledger />} />
+        <Route path="/Summary" element={<Summary />} />
+      </Route>
+      <Route path="/Login" element={<Login />} />
+      <Route path="/SignUp" element={<SignUp />} />
+    </Routes>
   );
 }
-
-export default App;
