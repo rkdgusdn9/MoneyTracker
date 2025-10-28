@@ -1,3 +1,3 @@
-export default function MainLayout() {
+export default function Login() {
   return <></>;
 }

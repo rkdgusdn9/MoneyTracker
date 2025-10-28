@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MoneyTrackingProject")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9ce19033aa947d4ec18e5f5db34c11c39bff7813")]
 [assembly: System.Reflection.AssemblyProductAttribute("MoneyTrackingProject")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MoneyTrackingProject")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
